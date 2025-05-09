@@ -25,6 +25,9 @@ const NavBar = () => {
             <Link to="/" className="text-blog-dark hover:text-blog-primary font-medium">
               Home
             </Link>
+            <Link to="/news" className="text-blog-dark hover:text-blog-primary font-medium">
+              News Feed
+            </Link>
             <Link to="/categories" className="text-blog-dark hover:text-blog-primary font-medium">
               Categories
             </Link>

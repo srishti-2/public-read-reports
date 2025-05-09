@@ -10,6 +10,7 @@ import CategoryPage from "./pages/CategoryPage";
 import SearchResults from "./pages/SearchResults";
 import CategoriesPage from "./pages/CategoriesPage";
 import AboutPage from "./pages/AboutPage";
+import NewsFeed from "./pages/NewsFeed";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/news" element={<NewsFeed />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

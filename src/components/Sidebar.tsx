@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Newspaper } from 'lucide-react';
 import { getAllCategories } from '@/data/reports';
 
 const Sidebar = () => {
@@ -24,6 +24,22 @@ const Sidebar = () => {
             </li>
           ))}
         </ul>
+      </div>
+      
+      <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+        <div className="flex items-center mb-4">
+          <Newspaper className="w-4 h-4 mr-2 text-blog-primary" />
+          <h2 className="text-xl font-semibold text-blog-dark">Live News</h2>
+        </div>
+        <p className="text-gray-700 mb-4">
+          Get the latest headlines from Google News and Times of India.
+        </p>
+        <Link 
+          to="/news" 
+          className="text-blog-primary hover:text-blog-secondary font-medium"
+        >
+          View news feed →
+        </Link>
       </div>
       
       <div className="bg-white rounded-lg shadow-sm p-6">
