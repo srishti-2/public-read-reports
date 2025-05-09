@@ -31,7 +31,11 @@ const AboutPage = () => {
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mt-6 p-6 bg-gray-50 rounded-lg">
             <div className="flex flex-col items-center">
               <Avatar className="h-32 w-32 border-2 border-blog-primary">
-                <AvatarImage src="/lovable-uploads/be074a8f-c1eb-49c2-8165-b43d58fcc31a.png" alt="SRISHTI GOYAL" />
+                <AvatarImage 
+                  src="/lovable-uploads/be074a8f-c1eb-49c2-8165-b43d58fcc31a.png" 
+                  alt="SRISHTI GOYAL" 
+                  className="object-cover object-center"
+                />
                 <AvatarFallback>SG</AvatarFallback>
               </Avatar>
               <h3 className="mt-3 text-xl font-semibold text-blog-dark">SRISHTI GOYAL</h3>
