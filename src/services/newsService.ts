@@ -1,4 +1,3 @@
-
 import { parseStringPromise } from 'xml2js';
 
 export interface NewsItem {
@@ -11,7 +10,7 @@ export interface NewsItem {
 }
 
 // Using RSS feeds for demonstration - in production, proper CORS-enabled API endpoints or a backend proxy would be needed
-const CORS_PROXY = 'https://corsproxy.io/?';
+const CORS_PROXY = 'http://localhost:3001/proxy?url=';
 
 const GOOGLE_NEWS_RSS = `${CORS_PROXY}https://news.google.com/rss`;
 const TOI_RSS = `${CORS_PROXY}https://timesofindia.indiatimes.com/rssfeedstopstories.cms`;

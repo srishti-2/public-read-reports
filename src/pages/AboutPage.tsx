@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
@@ -32,7 +31,7 @@ const AboutPage = () => {
             <div className="flex flex-col items-center">
               <Avatar className="h-32 w-32 border-2 border-blog-primary">
                 <AvatarImage 
-                  src="/lovable-uploads/be074a8f-c1eb-49c2-8165-b43d58fcc31a.png" 
+                  src="/placeholder-image.png" 
                   alt="SRISHTI GOYAL" 
                   className="object-cover object-center"
                 />
