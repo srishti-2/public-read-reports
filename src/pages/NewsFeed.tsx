@@ -1,10 +1,10 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Layout from '@/components/Layout';
 import NewsCard from '@/components/NewsCard';
 import { fetchAllNews, fetchGoogleNews, fetchTimesOfIndia, NewsItem } from '@/services/newsService';
-import { Newspaper, RssIcon } from 'lucide-react';
+import { Newspaper, RssIcon, ExternalLink } from 'lucide-react';
 
 const NewsFeed = () => {
   const [filter, setFilter] = useState<'all' | 'google' | 'toi'>('all');
@@ -38,6 +38,28 @@ const NewsFeed = () => {
         <p className="text-gray-600 mb-6">
           Stay informed with the latest headlines from Google News and Times of India
         </p>
+        
+        {/* External links to news sources */}
+        <div className="flex flex-wrap gap-4 mb-6 p-4 bg-white rounded-lg shadow-sm">
+          <p className="w-full text-sm text-gray-600 mb-2">Visit original news sources:</p>
+          <a 
+            href="https://news.google.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center text-blue-600 hover:text-blue-800"
+          >
+            Google News <ExternalLink className="ml-1 w-4 h-4" />
+          </a>
+          <span className="text-gray-300 mx-2">|</span>
+          <a 
+            href="https://timesofindia.indiatimes.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center text-orange-600 hover:text-orange-800"
+          >
+            Times of India <ExternalLink className="ml-1 w-4 h-4" />
+          </a>
+        </div>
         
         {/* Filter options */}
         <div className="flex flex-wrap gap-3 mb-6">
