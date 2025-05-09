@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				blog: {
+					'primary': '#9b87f5',
+					'secondary': '#7E69AB',
+					'tertiary': '#6E59A5',
+					'light': '#D6BCFA',
+					'neutral': '#8E9196',
+					'dark': '#1A1F2C',
+					'light-bg': '#F8F9FA',
 				}
 			},
 			borderRadius: {
@@ -89,8 +99,40 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'serif': ['Georgia', 'serif']
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '65ch',
+						h1: {
+							fontWeight: '700',
+						},
+						h2: {
+							fontWeight: '600',
+						},
+						h3: {
+							fontWeight: '600',
+						},
+						p: {
+							lineHeight: '1.75',
+						},
+						a: {
+							color: '#9b87f5',
+							'&:hover': {
+								color: '#7E69AB',
+							},
+						}
+					}
+				}
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require('@tailwindcss/typography')
+	],
 } satisfies Config;
